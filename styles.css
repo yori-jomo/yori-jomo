@@ -61,7 +61,7 @@ input {
   left: -1.7857%;
   display: block;
   width: 103.5714%;
-  height: 100%;
+  height: 85%;
   object-fit: fill;
 }
 
@@ -112,15 +112,22 @@ input {
   width: 5.2248cqi;
 }
 
-.header-navigation__links a,
-.header-navigation__logo,
+/* Navigation links */
+.header-navigation__links a {
+  font-weight: 400;
+  transition: font-weight 160ms ease;
+}
+
+.header-navigation__links a:hover {
+  font-weight: 700;
+}
+
+/* Icons only */
 .header-navigation__bag,
 .header-navigation__search-toggle {
   transition: opacity 160ms ease;
 }
 
-.header-navigation__links a:hover,
-.header-navigation__logo:hover,
 .header-navigation__bag:hover,
 .header-navigation__search-toggle:hover {
   opacity: 0.72;
@@ -140,7 +147,8 @@ input {
   left: 50%;
   display: block;
   width: max-content;
-  transform: translate(-50%, -50%) scale(clamp(1, calc(100cqi / 889.4px), 2.125));
+  transform: translate(-50%, -50%)
+    scale(clamp(1, calc(100cqi / 889.4px), 2.125));
 }
 
 .header-navigation__logo img,
@@ -213,7 +221,7 @@ input {
 
 .hero__copy {
   position: absolute;
-  top: 71.69%;
+  top: 51.69%;
   left: 2.6455%;
   width: 52.05%;
   color: var(--color-white);
@@ -233,7 +241,7 @@ input {
 
 .hero__scroll {
   position: absolute;
-  bottom: 2.75%;
+  bottom: 18%;
   left: 50%;
   display: block;
   transform: translateX(-50%) scale(clamp(0.5, calc(100cqi / 1512px), 1.25));
@@ -243,7 +251,8 @@ input {
   position: relative;
   width: 100%;
   height: clamp(500px, 62.2354cqi, 1176px);
-  margin-top: -1px;
+  margin-top: -200px;
+  margin-bottom: 80px;
   overflow: hidden;
 }
 
@@ -499,7 +508,7 @@ input {
 
 .footer {
   position: relative;
-  width: 100%;
+  width: 80%;
   height: clamp(320px, 25.1984cqi, 476px);
   margin-top: 0;
   margin-bottom: 27px;
@@ -614,7 +623,7 @@ input {
 }
 
 .footer__copyright {
-  bottom: 47.5%;
+  bottom: 5%;
   left: 4.8942%;
   transform: translateY(100%);
 }
@@ -624,9 +633,9 @@ input {
 }
 
 .footer__terms {
-  bottom: 46.45%;
-  left: 44.246%;
-  transform: translateY(100%);
+  bottom: 5%;
+  left: 60%;
+  transform: translate(-50%, 100%);
 }
 
 .visually-hidden {
@@ -650,7 +659,8 @@ input {
   }
 
   .header-navigation__logo {
-    transform: translate(-50%, -50%) scale(clamp(1, calc(100cqi / 889.4px), 1.2));
+    transform: translate(-50%, -50%)
+      scale(clamp(1, calc(100cqi / 889.4px), 1.2));
   }
 
   .header-navigation__actions {
@@ -672,5 +682,4 @@ input {
   .footer__socials {
     width: 32%;
   }
-
 }
