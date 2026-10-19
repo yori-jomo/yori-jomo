@@ -136,7 +136,7 @@
   .yori-popup {
     grid-template-columns: 1fr;
     gap: 20px;
-    padding: 35px 22px 24px;
+    padding: 60px 22px 60px;
     max-height: 90dvh;
     overflow-y: auto;
   }
@@ -147,13 +147,14 @@
   }
 
   .yori-popup__content h2 {
-    margin: 0 0 20px;
+    margin: 2 0 20px;
     font-size: clamp(26px, 7vw, 36px);
   }
 
   .yori-popup__description {
     font-size: 14px;
     line-height: 1.4;
+    margin-bottom: 40px;
   }
 
   .yori-popup__form {
