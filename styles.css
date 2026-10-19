@@ -314,15 +314,13 @@ input {
 }
 
 .category-card__crop img {
-  position: absolute;
-  max-width: none;
-}
-
-.category-card__crop--three img {
-  top: -141.9%;
-  left: -43.56%;
-  width: 215.87%;
-  height: 313.81%;
+  display: block;
+  position: static;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 .category-card--three .category-card__caption {
@@ -331,13 +329,6 @@ input {
 
 .category-card--four {
   padding-top: 12.698cqi;
-}
-
-.category-card__crop--four img {
-  top: -89.89%;
-  left: -13.8%;
-  width: 136.59%;
-  height: 236.89%;
 }
 
 .category-card__caption {
