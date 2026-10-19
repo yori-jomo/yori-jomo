@@ -7,9 +7,11 @@
       name="description"
       content="Yori Jomo — considered footwear, made in Italy."
     />
+    <meta name="robots" content="noindex, nofollow, noarchive" />
     <title>Yori Jomo — Considered Footwear</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="newsletter-popup.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&family=Instrument+Sans:wght@400;600;700&display=swap"
       rel="stylesheet"
@@ -17,6 +19,53 @@
     <link rel="stylesheet" href="styles.css" />
     <script src="script.js" defer></script>
   </head>
+  <div class="yori-popup-backdrop" id="yoriPopupBackdrop"></div>
+
+  <section
+    class="yori-popup"
+    id="yoriPopup"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="yoriPopupTitle"
+    aria-hidden="true"
+  >
+    <button
+      class="yori-popup__close"
+      id="yoriPopupClose"
+      type="button"
+      aria-label="Close newsletter popup"
+    >
+      &times;
+    </button>
+
+    <div class="yori-popup__image">
+      <img src="assets/newsletter-popup.jpg" alt="Yori Jomo shoes" />
+    </div>
+
+    <div class="yori-popup__content">
+      <h2 id="yoriPopupTitle">GET ON THE LIST</h2>
+
+      <p class="yori-popup__description">
+        What's inside: New arrivals, exclusive sales, event invites and more
+      </p>
+
+      <form class="yori-popup__form" id="yoriPopupForm">
+        <input
+          type="email"
+          placeholder="YOUR EMAIL, PLEASE."
+          aria-label="Email address"
+          required
+        />
+        <button type="submit">SIGN UP</button>
+      </form>
+
+      <p class="yori-popup__privacy">
+        To see how we may use your information, take a look at our
+        <a href="#">privacy policy</a>
+      </p>
+    </div>
+  </section>
+
   <body>
     <main class="page" id="top">
       <section class="hero" aria-labelledby="hero-title">
@@ -282,5 +331,7 @@
         <p class="footer__terms">Terms and Policies</p>
       </footer>
     </main>
+    <script src="./login.js"></script>
+    <script src="./newsletter-popup.js"></script>
   </body>
 </html>

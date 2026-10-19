@@ -1,28 +1,36 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Enter the password to access Yori Jomo.">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Enter the password to access Yori Jomo."
+    />
+    <meta name="robots" content="noindex, nofollow, noarchive" />
     <title>Password Access — Yori Jomo</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400&family=Instrument+Sans:wght@400&display=swap"
       rel="stylesheet"
-    >
-    <link rel="stylesheet" href="login.css">
+    />
+    <link rel="stylesheet" href="css/login.css" />
   </head>
   <body>
     <main class="password-page">
       <section class="password-access" aria-labelledby="password-prompt">
-        <a class="password-access__logo" href="index.html" aria-label="Yori Jomo home">
-          <img src="assets/password-page-logo.svg" alt="Yori Jomo">
+        <a
+          class="password-access__logo"
+          href="index.html"
+          aria-label="Yori Jomo home"
+        >
+          <img src="assets/password-page-logo.svg" alt="Yori Jomo" />
         </a>
         <p class="password-access__prompt" id="password-prompt">
           Please enter the password to access
         </p>
-        <!-- PASSWORD_ERROR -->
+
         <form class="password-access__form" action="/login" method="post">
           <label class="visually-hidden" for="site-password">Password</label>
           <input
@@ -32,9 +40,13 @@
             type="password"
             placeholder="Password"
             autocomplete="current-password"
+          />
+          <button
+            class="password-access__submit"
+            type="submit"
+            aria-label="Submit password"
           >
-          <button class="password-access__submit" type="submit" aria-label="Submit password">
-            <img src="assets/password-page-arrow.svg" alt="">
+            <img src="assets/password-page-arrow.svg" alt="" />
           </button>
         </form>
       </section>
