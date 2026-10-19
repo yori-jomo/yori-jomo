@@ -1,0 +1,166 @@
+.yori-popup-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 3500;
+  display: none;
+}
+
+.yori-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3600;
+  display: none;
+  grid-template-columns: 261px minmax(0, 1fr);
+  gap: 26px;
+  width: min(758px, calc(100% - 32px));
+  min-height: 448px;
+  padding: 50px 34px 48px;
+  background: #fff;
+  color: #000;
+  box-sizing: border-box;
+}
+
+.yori-popup.is-visible {
+  display: grid;
+}
+
+.yori-popup-backdrop.is-visible {
+  display: block;
+}
+
+.yori-popup__close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  border: none;
+  background: none;
+  color: #000;
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.yori-popup__image img {
+  display: block;
+  width: 261px;
+  height: 350px;
+  object-fit: cover;
+}
+
+.yori-popup__content {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.yori-popup__content h2 {
+  margin: 40px 0 30px;
+  font-family: "Instrument Sans", sans-serif;
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 1;
+  text-align: center;
+}
+
+.yori-popup__description {
+  margin: 0;
+  font-family: "Instrument Sans", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+}
+
+.yori-popup__form {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 96px;
+  align-items: end;
+  gap: 8px;
+
+  width: 90%;
+  margin: 80px auto 0;
+}
+
+.yori-popup__form input {
+  flex: 1;
+  width: 100%;
+  min-width: 0;
+  height: 35px;
+  box-sizing: border-box;
+  border: 0;
+  border-bottom: 1px solid #000;
+  border-radius: 0;
+  padding: 8px 0;
+  background: transparent;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 12px;
+  outline: none;
+}
+
+.yori-popup__form input::placeholder {
+  color: #686767;
+}
+
+.yori-popup__form button {
+  flex: 0 0 96px;
+  height: 35px;
+  border: 0;
+  background: #101010;
+  color: #fdfbf9;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.yori-popup__privacy {
+  margin: 17px 0 0;
+  width: 100%;
+  color: rgba(0, 0, 0, 0.5);
+  font-family: "Instrument Sans", sans-serif;
+  font-size: 11px;
+  line-height: 1.3;
+  text-align: center;
+}
+
+.yori-popup__privacy a {
+  color: inherit;
+  font-style: italic;
+  text-decoration: underline;
+}
+
+@media (max-width: 650px) {
+  .yori-popup {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 35px 22px 24px;
+    max-height: 90dvh;
+    overflow-y: auto;
+  }
+
+  .yori-popup__image img {
+    width: 100%;
+    height: 180px;
+  }
+
+  .yori-popup__content h2 {
+    margin: 0 0 20px;
+    font-size: clamp(26px, 7vw, 36px);
+  }
+
+  .yori-popup__description {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+
+  .yori-popup__form {
+    margin-top: 28px;
+  }
+
+  .yori-popup__form input {
+    font-size: 12px;
+  }
+}
